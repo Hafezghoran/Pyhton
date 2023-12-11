@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-# Time and constant velocity
+# Time and constant velocity for a particle
 time = [t for t in range(10)]  # Time
 velocity = [5 for _ in range(10)]  # Constant velocity of 5
 
@@ -12,7 +12,7 @@ for i in range(1, len(time)):
 # Plots
 plt.figure(figsize=(12, 4))
 
-# Position-time graph
+# Position-time graph and displaying
 plt.subplot(1, 2, 1)
 plt.plot(time, position, marker='o')
 plt.title('Position vs Time')
