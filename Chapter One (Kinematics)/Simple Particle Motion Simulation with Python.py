@@ -11,7 +11,7 @@ def particle_motion(initial_position, initial_velocity, acceleration, time):
         velocities.append(velocity)
     return positions, velocities
 
-# Inputs
+# Inputs data
 initial_pos = 0
 initial_vel = 5
 acceleration = 2
@@ -32,7 +32,7 @@ plt.subplot(2, 1, 2)
 plt.plot(time, velocities, marker='o')
 plt.title('Particle Velocity over Time')
 plt.xlabel('Time')
-plt.ylabel('Velocity')
+plt.ylabel('Velocity of particle')
 
 plt.tight_layout()
 plt.show()
