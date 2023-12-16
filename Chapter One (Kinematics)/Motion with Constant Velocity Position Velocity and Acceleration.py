@@ -13,7 +13,7 @@ position = np.cumsum(velocity) * (time[1] - time[0])  # Calculating position as 
 # Zero acceleration (assuming constant velocity)
 acceleration = np.zeros_like(time)
 
-# Displaying the plots
+# Displaying the plots on the diagram
 fig, (ax1, ax2, ax3) = plt.subplots(3, 1, figsize=(8, 10))
 
 ax1.plot(time, position)
