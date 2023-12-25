@@ -1,0 +1,29 @@
+import matplotlib.pyplot as plt
+
+def plot_motion(height, g=9.81):
+    # Calculate time and motion parameters
+    t = (2 * height / g) ** 0.5
+    time = [i * t / 100 for i in range(101)]
+    velocity = [g * i for i in time]
+    acceleration = [g for _ in time]
+
+    # Plotting velocity
+    plt.subplot(2, 1, 1)
+    plt.plot(time, velocity, 'r')
+    plt.title('Velocity vs Time')
+    plt.xlabel('Time (s)')
+    plt.ylabel('Velocity (m/s)')
+
+    # Plotting acceleration
+    plt.subplot(2, 1, 2)
+    plt.plot(time, acceleration, 'b')
+    plt.title('Acceleration vs Time')
+    plt.xlabel('Time (s)')
+    plt.ylabel('Acceleration (m/s^2)')
+
+    plt.tight_layout()
+    plt.show()
+
+# Example usage: Plotting motion for a height of 100 meters
+height = 100  # in meters
+plot_motion(height)
